@@ -23,8 +23,7 @@ export default function Headline(){
   <Container maxWidth="lg" sx={{ marginTop: 4, textAlign: "center" }}>
     <Box>
     <Typography fontSize={{ xs: 20, sm: 30, md: 40, lg: 50 }} component="div" sx={{ flexGrow: 1 }}>
-      {/* Your perfect yard <u>without lifting a finger</u> */}
-      Eye Popping Work at Jaw Dropping Prices
+      Exceptional Results at a Price You Can Afford
     </Typography>
     </Box>
     <Box>

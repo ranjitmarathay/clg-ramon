@@ -10,6 +10,7 @@ import PickDayOfWeek from "../../components/quote/PickDayOfWeek";
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Loader } from '@googlemaps/js-api-loader';
+import EnterSquareFootage from "../../components/quote/EnterSquareFootage";
 /* global google */
 
 interface SelectedDays {
@@ -30,7 +31,7 @@ export default function Page() {
   const [timeSaved, setTimeSaved] = useState(0);
   
   const [selectedServices, setSelectedServices] = useState([
-    {service: 'Rental Make Ready', selected: false},
+    // {service: 'Rental Make Ready', selected: false},
     {service: 'Painting & Texture', selected: false},
     {service: 'Cabinet Refinishing', selected: false},
     {service: 'Tiling', selected: false},
@@ -48,6 +49,14 @@ export default function Page() {
     sunday: false
   });
 
+  const zipCodes = [
+    "78701", "78702", "78703", "78704", "78705", "78712", "78721", "78722", "78723", "78724", 
+    "78725", "78726", "78727", "78728", "78729", "78730", "78731", "78732", "78733", "78734", 
+    "78735", "78736", "78737", "78738", "78739", "78741", "78742", "78744", "78745", "78746", 
+    "78747", "78748", "78749", "78750", "78751", "78752", "78753", "78754", "78756", "78757", 
+    "78758", "78759"
+  ];
+
   const [timeOfDay, setTimeOfDay] = useState("");
 
   const [name, setName] = useState("");
@@ -59,6 +68,14 @@ export default function Page() {
   const [message, setMessage] = useState("");
 
   const [address, setAddress] = useState("");
+
+  const [city, setCity] = useState("");
+
+  const [state, setState] = useState("");
+
+  const [zip, setZip] = useState("");
+
+  const [squareFootage, setSquareFootage] = useState(0);
 
   const handleServicesChange = (event: any) => {
     const selectedValues = event.target.value;
@@ -85,51 +102,16 @@ export default function Page() {
     });
   };
 
-  async function calculateDistance(originAddress: string, destinationTown: string): Promise<[number, string]> {
-    // const loader = new Loader({
-    //   apiKey: process.env.GOOGLE_MAPS_API_KEY as string, // Replace 'YOUR_API_KEY' with your Google Maps API key
-    //   libraries: ['places'],
-    //   version: "weekly",
-    // });
+  const checkZipCode = (zipCode: string) => {
+    return zipCodes.includes(zipCode);
+  }
 
-    // return loader
-    // .importLibrary('maps')
-    // .then((google) => {
-    //   // Wrap the DistanceMatrixService call in a Promise
-    //   const getDistance = (originAddress: string, destinationTown: string): Promise<[number, string]> => {
-    //     return new Promise((resolve, reject) => {
-    //       const service = new google.maps.DistanceMatrixService();
-    //       service.getDistanceMatrix(
-    //         {
-    //           origins: [originAddress],
-    //           destinations: [destinationTown],
-    //           travelMode: 'DRIVING',
-    //         },
-    //         (response: any, status: any) => {
-    //           if (status === 'OK') {
-    //             const results = response.rows[0].elements;
-    //             const element = results[0];
-    //             if (element.status === 'OK') {
-    //               const distance = element.distance;
-    //               const distanceText = distance.text;
-    //               const distanceValue = distance.value;
-    //               console.log('Distance: ' + distanceText + ' (' + distanceValue + ' meters)');
-    //               resolve([distanceValue, distanceText]);
-    //             } else {
-    //               reject(new Error('Element status not OK: ' + element.status));
-    //             }
-    //           } else {
-    //             reject(new Error('Error: ' + status));
-    //           }
-    //         }
-    //       );
-    //     });
-    //   };
-    //   return getDistance(originAddress, destinationTown);
-    // }).catch((error) => {
-    //   console.error('Error loading Google Maps API: ', error);
-    //   throw error;
-    // });
+  const displayNiceTime = (hours: number) => {
+    if (hours % 2 === 0) {
+      return hours
+    } else {
+      return hours + 0.5
+    }
   }
   
   const generateQuote = async () => {
@@ -137,8 +119,8 @@ export default function Page() {
     let numSelectedDays = Object.values(selectedDays).filter(day => day).length;
     console.log("Generating Quote", numSelectedServices, numSelectedDays, address, timeOfDay, name, email, phone, message);
   
-    if(numSelectedServices > 0 && numSelectedDays > 0 && address !== "" && timeOfDay !== "" && name !== "" && email !== "" && phone !== "" && message !== "") {
-      console.log("Generating Quote", selectedServices, selectedDays, address, timeOfDay, name, email, phone, message);
+    if(zip != "" && city !== "" && state !== "" && address !== "" &&  name !== "" && email !== "" && phone !== "" && message !== "" && squareFootage !== 0) {
+      console.log("Generating Quote", selectedServices, selectedDays, address, name, email, phone, message);
       // let days = Object.keys(selectedDays).filter(day => selectedDays[day]).join(", ");
       // let days = Object.keys(selectedDays).filter((day): day is keyof SelectedDays => selectedDays[day as keyof SelectedDays]).join(", ");
       let services = selectedServices.map(service => service.service).join(", ");
@@ -147,18 +129,15 @@ export default function Page() {
       var timeSaved = 0;
   
       try {
-        const [distanceValue, distanceText] = await calculateDistance("111 E Cesar Chavez St, Austin, TX 78701", address);
 
-        console.log("Distance", distanceValue, distanceText);
-  
-        if (distanceValue <= 48280) {
-          quoteValue += 50;
-        } else if (distanceValue > 48280 && distanceValue <= 96560) {
-          quoteValue += 200;
-        } else {
-          alert("We are sorry, but we can only provide quotes within 60 miles of your location.");
+        const zipCodeCheck = checkZipCode(zip);
+
+        console.log("Zip Code Check", zipCodeCheck);
+
+        if (!zipCodeCheck) {
+          alert("We are sorry, but we can only provide quotes within Austin, TX.");
           return;
-        }
+        }  
   
         if (timeOfDay === "Morning") {
           quoteValue += 50;
@@ -176,19 +155,26 @@ export default function Page() {
           timeSaved += 2;
         }
   
-        if (services.includes("Service 1")) {
+        if (services.includes("Rental Make Ready")) {
           quoteValue += 300;
           timeSaved += 4;
-        } else if (services.includes("Service 2")) {
-          quoteValue += 125;
-          timeSaved += 2.5;
-        } else if (services.includes("Service 3")) {
-          quoteValue += 150;
-          timeSaved += 1.5;
-        } else if (services.includes("Service 4")) {
-          quoteValue += 175;
-          timeSaved += 2;
+        } else if (services.includes("Painting & Texture")) {
+          quoteValue += 800;
+          timeSaved += 5.5;
+        } else if (services.includes("Cabinet Refinishing")) {
+          quoteValue += 300;
+          timeSaved += 3.5;
+        } else if (services.includes("Tiling")) {
+          quoteValue += 400;
+          timeSaved += 6;
+        } else if (services.includes("Plumbing")){
+          quoteValue += 400;
+          timeSaved += 4;
+        } else if (services.includes("Electrical")) {
+          quoteValue += 400;
+          timeSaved += 4;
         }
+
   
         // alert(`Your quote is $${quoteValue} for ${days} and ${services}`);
         setQuoteValue(quoteValue)
@@ -205,7 +191,7 @@ export default function Page() {
   return (
    <Container>
      <Typography variant="h5" sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" } }} marginTop={2} color="#000000">
-        Just 5 Easy Steps To Get A Quote
+        Just 4 Easy Steps To Get A Quote
      </Typography>
      <Box>
       <Typography
@@ -227,7 +213,7 @@ export default function Page() {
       >
         2. Enter Address
       </Typography>
-        <EnterAddress address={address} setAddress={setAddress}/>
+        <EnterAddress address={address} setAddress={setAddress} city={city} setCity={setCity} state={state} setState={setState} zip={zip} setZip={setZip}/>
      </Box>
      <Box>
       <Typography
@@ -236,21 +222,10 @@ export default function Page() {
           marginTop={2}
           color="#000000"
         >
-          3. Select Time of Day Preference
+          3. Enter Square Footage of Home
         </Typography>
-        <PickTimeDay selectedTime={timeOfDay} handleTimeChange={handleTimeChange} />
+        <EnterSquareFootage squareFootage={squareFootage} setSquareFootage={setSquareFootage}/>
      </Box>
-     <Box>
-      <Typography
-          variant="body1"
-          sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.3rem" } }}
-          marginTop={2}
-          color="#000000"
-        >
-          4. Select Day of Week Preference
-        </Typography>
-        <PickDayOfWeek selectedDays={selectedDays} handleDayChange={handleDayChange}/>
-      </Box>
      <Box>
         <Typography
           variant="body1"
@@ -258,7 +233,7 @@ export default function Page() {
           marginTop={2}
           color="#000000"
         >
-          5. Enter Contact Info
+          4. Enter Contact Info
         </Typography>
         <ContactInfo name={name} setName={setName} email={email} setEmail={setEmail} phone={phone} setPhone={setPhone} message={message} setMessage={setMessage}/>
      </Box>
@@ -285,13 +260,13 @@ export default function Page() {
                 color: "#000000",
               }}
             >
-              Your Quote: ${quoteValue}
+              Your Quote: ${quoteValue} - ${quoteValue*2.5}
             </Typography>
             <Typography
               variant="body1"
               sx={{ fontSize: { xs: "0.8rem", sm: "0.9rem", md: "1rem", lg: "1.1rem" }, marginTop: "10px" }}
             >
-              You saved over ${quoteValue*.25} and {timeSaved} hours!
+              You could save ${quoteValue*2*.25} and {displayNiceTime(timeSaved)} hours!
             </Typography>
             <Typography
               variant="body1"

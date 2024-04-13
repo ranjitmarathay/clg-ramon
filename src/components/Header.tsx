@@ -2,10 +2,13 @@
 
 import React from 'react';
 import { AppBar, Toolbar, Link, Box, Typography, Button, Stack, Container, IconButton, Menu, MenuItem } from '@mui/material';
+import Image from "next/image";
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from 'next/navigation';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+
+import logo from '../images/logo.jpeg';
 
 const Header: React.FC = () => {
   const router = useRouter();
@@ -27,6 +30,13 @@ const Header: React.FC = () => {
     <AppBar position="static" color="transparent" sx={{ marginBottom: 4 }}>
       <Container maxWidth={false}>
         <Toolbar disableGutters sx={{ padding: '0px' }}>
+          {/* <Image
+            src={logo}
+            alt="logo"
+            width={100}
+            height={100}
+            style={{ maxWidth: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center' }}
+          /> */}
           <Link href="/" color="#000" underline="none">
             <Typography fontSize={{ xs: 22, sm: 28, md: 32, lg: 42 }}>
               Loredo Professional Remodeling

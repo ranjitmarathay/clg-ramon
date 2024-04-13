@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Headline from "../components/reputation/Headline";
 import GetQuoteButton from "../components/GetQuoteButton";
 import Reputation from "../components/reputation/Reputation";
