@@ -33,7 +33,7 @@ export default function Page() {
         </Grid>
         <Grid item xs={12} sm={6}>
             <Typography variant="h4" gutterBottom>
-              What You Can Expect From us
+              What You Can Expect From Us
             </Typography>
             <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.5rem" } }} color="text.secondary">
               With Loredo Professional Remodeling, expect reasonable pricing without compromising the superior quality of our work. We invest in hiring and retaining the best talent in the industry, ensuring that every project is executed with expertise and precision. Our dedication to excellence and customer satisfaction drives us to continuously improve and set new benchmarks in the remodeling industry.
