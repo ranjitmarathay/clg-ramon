@@ -28,7 +28,7 @@ export default function Page() {
               Our Values
             </Typography>
             <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.5rem" } }} color="text.secondary">
-                Our philosophy revolves around the core values of efficiency, respect, and timeliness. We understand the significance of respecting our clients' time and property, and we always strive to complete every project on schedule while maintaining the highest standards of craftsmanship. Our team of builders and craftsmen, meticulously curated by our founder Ramon Loredo, upholds these values and works tirelessly to bring our clients' remodeling visions to life.
+                Our philosophy revolves around the core values of efficiency, respect, and timeliness. We understand the significance of respecting our clients&apos; time and property, and we always strive to complete every project on schedule while maintaining the highest standards of craftsmanship. Our team of builders and craftsmen, meticulously curated by our founder Ramon Loredo, upholds these values and works tirelessly to bring our clients&apos; remodeling visions to life.
             </Typography>
         </Grid>
         <Grid item xs={12} sm={6}>
