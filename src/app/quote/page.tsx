@@ -30,11 +30,12 @@ export default function Page() {
   const [timeSaved, setTimeSaved] = useState(0);
   
   const [selectedServices, setSelectedServices] = useState([
-    {service: 'Service 1', selected: false},
-    {service: 'Service 2', selected: false},
-    {service: 'Service 3', selected: false},
-    {service: 'Service 4', selected: false},
-    {service: 'Service 5', selected: false}
+    {service: 'Rental Make Ready', selected: false},
+    {service: 'Painting & Texture', selected: false},
+    {service: 'Cabinet Refinishing', selected: false},
+    {service: 'Tiling', selected: false},
+    {service: 'Plumbing', selected: false},
+    {service: 'Electrical', selected: false}
   ]);
 
   const [selectedDays, setSelectedDays] = useState<Record<string, boolean>>({
@@ -85,75 +86,49 @@ export default function Page() {
   };
 
   async function calculateDistance(originAddress: string, destinationTown: string): Promise<[number, string]> {
-    const loader = new Loader({
-      apiKey: process.env.GOOGLE_MAPS_API_KEY as string, // Replace 'YOUR_API_KEY' with your Google Maps API key
-      libraries: ['places'],
-      version: "weekly",
-    });
+    // const loader = new Loader({
+    //   apiKey: process.env.GOOGLE_MAPS_API_KEY as string, // Replace 'YOUR_API_KEY' with your Google Maps API key
+    //   libraries: ['places'],
+    //   version: "weekly",
+    // });
 
-    return loader
-    .importLibrary('maps')
-    .then((google) => {
-      // Wrap the DistanceMatrixService call in a Promise
-      const getDistance = (originAddress: string, destinationTown: string): Promise<[number, string]> => {
-        return new Promise((resolve, reject) => {
-          const service = new google.maps.DistanceMatrixService();
-          service.getDistanceMatrix(
-            {
-              origins: [originAddress],
-              destinations: [destinationTown],
-              travelMode: 'DRIVING',
-            },
-            (response: any, status: any) => {
-              if (status === 'OK') {
-                const results = response.rows[0].elements;
-                const element = results[0];
-                if (element.status === 'OK') {
-                  const distance = element.distance;
-                  const distanceText = distance.text;
-                  const distanceValue = distance.value;
-                  console.log('Distance: ' + distanceText + ' (' + distanceValue + ' meters)');
-                  resolve([distanceValue, distanceText]);
-                } else {
-                  reject(new Error('Element status not OK: ' + element.status));
-                }
-              } else {
-                reject(new Error('Error: ' + status));
-              }
-            }
-          );
-        });
-      };
-      return getDistance(originAddress, destinationTown);
-    }).catch((error) => {
-      console.error('Error loading Google Maps API: ', error);
-      throw error;
-    });
-
-
-    // return new Promise((resolve, reject) => {
-    //   var service = new google.maps.DistanceMatrixService();
-    //   service.getDistanceMatrix(
-    //     {
-    //       origins: [originAddress],
-    //       destinations: [destinationTown],
-    //       travelMode: 'DRIVING',
-    //       unitSystem: google.maps.UnitSystem.IMPERIAL,
-    //     },
-    //     function(response, status) {
-    //       if (status === 'OK') {
-    //         var results = response.rows[0].elements;
-    //         var distance = results[0].distance;
-    //         var distanceText = distance.text;
-    //         var distanceValue = distance.value;
-    //         console.log('Distance: ' + distanceText + ' (' + distanceValue + ' meters)');
-    //         resolve([distanceValue, distanceText]);
-    //       } else {
-    //         console.log('Error: ' + status);
-    //         reject(status);
-    //       }
-    //     }
-    //   );
+    // return loader
+    // .importLibrary('maps')
+    // .then((google) => {
+    //   // Wrap the DistanceMatrixService call in a Promise
+    //   const getDistance = (originAddress: string, destinationTown: string): Promise<[number, string]> => {
+    //     return new Promise((resolve, reject) => {
+    //       const service = new google.maps.DistanceMatrixService();
+    //       service.getDistanceMatrix(
+    //         {
+    //           origins: [originAddress],
+    //           destinations: [destinationTown],
+    //           travelMode: 'DRIVING',
+    //         },
+    //         (response: any, status: any) => {
+    //           if (status === 'OK') {
+    //             const results = response.rows[0].elements;
+    //             const element = results[0];
+    //             if (element.status === 'OK') {
+    //               const distance = element.distance;
+    //               const distanceText = distance.text;
+    //               const distanceValue = distance.value;
+    //               console.log('Distance: ' + distanceText + ' (' + distanceValue + ' meters)');
+    //               resolve([distanceValue, distanceText]);
+    //             } else {
+    //               reject(new Error('Element status not OK: ' + element.status));
+    //             }
+    //           } else {
+    //             reject(new Error('Error: ' + status));
+    //           }
+    //         }
+    //       );
+    //     });
+    //   };
+    //   return getDistance(originAddress, destinationTown);
+    // }).catch((error) => {
+    //   console.error('Error loading Google Maps API: ', error);
+    //   throw error;
     // });
   }
   

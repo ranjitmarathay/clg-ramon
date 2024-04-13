@@ -29,7 +29,7 @@ const Header: React.FC = () => {
         <Toolbar disableGutters sx={{ padding: '0px' }}>
           <Link href="/" color="#000" underline="none">
             <Typography fontSize={{ xs: 22, sm: 28, md: 32, lg: 42 }}>
-              **Company Name**
+              Loredo Professional Remodeling
             </Typography>
           </Link>
           <Box sx={{ flexGrow: 1 }} />
