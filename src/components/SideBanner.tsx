@@ -10,7 +10,7 @@ const SideBanner: React.FC = () => {
             position: 'fixed',
             top: '50%', // Adjust the position as needed
             right: 0,
-            width: 250, // Adjust width as needed
+            width: 200, // Adjust width as needed
             backgroundColor: 'primary.main',
             color: '#fff',
             padding: 2,
@@ -21,14 +21,16 @@ const SideBanner: React.FC = () => {
             zIndex: 1
         }}>
             <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
-                <PhoneIcon fontSize="large" sx={{paddingRight: "10px"}}/>
-                <Typography variant="h4" component="div" sx={{ mt: 1 }}>
+                <Typography variant="h5" component="div" sx={{ mt: 1 }}>
                     Call Us Now
                 </Typography>
             </Box>
-            <Typography variant="h6" component="div">
-                512-902-3161
-            </Typography>
+            <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <PhoneIcon fontSize="large" sx={{paddingRight: "10px"}}/>
+                <Typography variant="h6" component="div">
+                    512-902-3161
+                </Typography>
+            </Box>
         </Box>
     );
 };

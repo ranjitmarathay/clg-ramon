@@ -15,7 +15,7 @@ function ServicesItem(props: any) {
           <Typography variant="h5" sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" } }}>
             {props.title}
           </Typography>
-          <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.5rem" } }} color="text.secondary">
+          <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.2rem" } }} color="text.secondary">
             {props.text}
           </Typography>
         </Box>

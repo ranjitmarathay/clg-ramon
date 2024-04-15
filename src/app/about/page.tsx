@@ -17,7 +17,7 @@ export default function Page() {
         <Typography variant="h4" gutterBottom>
           About Us
         </Typography>
-        <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.5rem" } }} color="text.secondary">
+        <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.2rem" } }} color="text.secondary">
         At Loredo Professional Remodeling, our mission is to transform houses into homes by delivering exceptional remodeling services in the Austin, Texas area. We believe that every project, from minor painting and texture jobs to extensive exterior renovations, should be approached with precision, efficiency, and an unwavering commitment to quality.
         </Typography>
       </Box>
@@ -30,7 +30,7 @@ export default function Page() {
             <Typography variant="h4" gutterBottom>
               Our Values
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.5rem" } }} color="text.secondary">
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.2rem" } }} color="text.secondary">
                 Our philosophy revolves around the core values of efficiency, respect, and timeliness. We understand the significance of respecting our clients&apos; time and property, and we always strive to complete every project on schedule while maintaining the highest standards of craftsmanship. Our team of builders and craftsmen, meticulously curated by our founder Ramon Loredo, upholds these values and works tirelessly to bring our clients&apos; remodeling visions to life.
             </Typography>
         </Grid>
@@ -38,7 +38,7 @@ export default function Page() {
             <Typography variant="h4" gutterBottom>
               What You Can Expect From Us
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.5rem" } }} color="text.secondary">
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.2rem" } }} color="text.secondary">
               With Loredo Professional Remodeling, expect reasonable pricing without compromising the superior quality of our work. We invest in hiring and retaining the best talent in the industry, ensuring that every project is executed with expertise and precision. Our dedication to excellence and customer satisfaction drives us to continuously improve and set new benchmarks in the remodeling industry.
             </Typography>
         </Grid>
@@ -50,7 +50,7 @@ export default function Page() {
             <Typography variant="h4" gutterBottom>
               Contact Us
             </Typography>
-            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.5rem" } }} color="text.secondary">
+            <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.2rem" } }} color="text.secondary">
               Choose Loredo Professional Remodeling for your next remodeling project and experience the difference that our philosophy of efficiency, respect, and timeliness can make in creating your dream space.
               
               Have questions or want to schedule a consultation? Call us at 512-555-5555.

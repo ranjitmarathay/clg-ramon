@@ -13,8 +13,8 @@ export default function Page() {
     <div>
       <Headline/>
       <GetQuoteButton text="Get An Instant Quote" color="primary"/>
-      <Reputation/>
-      <Testimonials/>
+      {/* <Reputation/>
+      <Testimonials/> */}
     </div>
   );
 }
