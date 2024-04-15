@@ -1,11 +1,14 @@
-'use client'
-
 import { Container, Typography, Box, Grid, Paper } from '@mui/material';
 import GetQuoteButton from '../../components/GetQuoteButton';
 import Image from 'next/image';
 import defaultImage from '../../images/defaultImage.jpeg';
 import awning from '../../images/awning.jpeg';
 import carpentry from '../../images/carpentry.jpeg';
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us",
+};
 
 export default function Page() {
   return (

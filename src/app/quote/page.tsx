@@ -13,6 +13,12 @@ import { Loader } from '@googlemaps/js-api-loader';
 import EnterSquareFootage from "../../components/quote/EnterSquareFootage";
 /* global google */
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Get A Quote",
+};
+
 interface SelectedDays {
   monday: boolean;
   tuesday: boolean;

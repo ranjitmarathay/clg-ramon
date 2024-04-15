@@ -8,7 +8,10 @@ import SideBanner from "../components/SideBanner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Professional Remodeling at the Best Price",
+  title: {
+    default: "Professional Remodeling at the Best Price",
+    template: "%s | Loredo Professional Remodeling",
+  },
   description: "Loredo Professional Remodeling is committed providing exceptional workmanship and customer service.",
 };
 
