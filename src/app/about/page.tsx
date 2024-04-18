@@ -1,14 +1,17 @@
-import { Container, Typography, Box, Grid, Paper } from '@mui/material';
-import GetQuoteButton from '../../components/GetQuoteButton';
+import { Container, Typography, Box, Grid } from '@mui/material';
+// import GetQuoteButton from '../../components/GetQuoteButton';
 import Image from 'next/image';
 import defaultImage from '../../images/defaultImage.jpeg';
 import awning from '../../images/awning.jpeg';
 import carpentry from '../../images/carpentry.jpeg';
-import { Metadata } from "next";
+import type { Metadata } from 'next'
+import dynamic from 'next/dynamic';
 
 export const metadata: Metadata = {
   title: "About Us",
 };
+
+const GetQuoteButton = dynamic(() => import('../../components/GetQuoteButton'), { ssr: true, loading: () => <div>Loading...</div> });
 
 export default function Page() {
   return (
@@ -53,9 +56,9 @@ export default function Page() {
             <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.2rem" } }} color="text.secondary">
               Choose Loredo Professional Remodeling for your next remodeling project and experience the difference that our philosophy of efficiency, respect, and timeliness can make in creating your dream space.
               
-              Have questions or want to schedule a consultation? Call us at 512-555-5555.
+              Have questions or want to schedule a consultation? Call us at 512-902-3161.
             </Typography>
-            <GetQuoteButton text="Get An Instant Quote" color="primary"/>
+            <GetQuoteButton text="Get An Instant Quote" buttonColor="primary"/>
           </Box>
         </Grid>
       </Grid>

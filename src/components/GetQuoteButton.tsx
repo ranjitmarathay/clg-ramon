@@ -1,25 +1,37 @@
 'use client'
-
-import { Button, Container } from "@mui/material";
+import React from 'react';
 import { useRouter } from 'next/navigation';
+import { Button, Container } from '@mui/material';
 
+// Define the interface for the component's props
+interface GetQuoteButtonProps {
+  text?: string;
+  buttonColor?: string;
+  footer?: boolean;
+}
 
-export default function GetQuoteButton(props: any){
+// Functional component with props typed according to the interface
+const GetQuoteButton: React.FC<GetQuoteButtonProps> = ({ text = "Request A Quote", buttonColor = "success", footer = false }) => {
   const router = useRouter();
 
-  if (props.footer){
-    return ( 
-      <Button variant="contained" color={props.color ? props.color : "success"} onClick={() => router.push('/quote')} sx={{ marginBottom: '20px', fontSize : '1.2rem' }}>
+  // Handler function to redirect to the quote page
+  const handleQuoteClick = () => router.push('/quote');
+
+  if (footer) {
+    return (
+      <Button variant="contained" color={buttonColor as any} onClick={handleQuoteClick} sx={{ marginBottom: '20px', fontSize: '1.2rem' }}>
         Request a Quote
       </Button>
-    )
-  } else{
+    );
+  } else {
     return (
       <Container maxWidth="lg" sx={{ marginTop: 4, textAlign: "center" }}>
-        <Button variant="contained" color={props.color ? props.color : "success"} onClick={() => router.push('/quote')} sx={{ marginBottom: '20px', fontSize : '1.2rem' }}>
-          {props.text ? props.text : "Request A Quote"}
+        <Button variant="contained" color={buttonColor as any} onClick={handleQuoteClick} sx={{ marginBottom: '20px', fontSize: '1.2rem' }}>
+          {text}
         </Button>
       </Container>
-    )
+    );
   }
-}
+};
+
+export default GetQuoteButton;

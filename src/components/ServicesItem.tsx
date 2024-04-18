@@ -1,8 +1,19 @@
+// 'use client'
+
 import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import Image from "next/image";
+// import StaticImageData from "next/image";
+import { StaticImageData } from 'next/image';
 
-function ServicesItem(props: any) {
+interface ServiceItemProps {
+  title: string;
+  text: string;
+  image?: StaticImageData;
+  serviceList: string[];
+}
+
+export default function ServicesItem(props: ServiceItemProps) {
   return (
     <Grid container spacing={2} sx={{ alignItems: "center", mb: 2, mt: 2 }} direction={{ xs: "column", lg: "row" }}>
       <Grid item xs={12} lg={props.image ? 6 : 12}>
@@ -26,7 +37,6 @@ function ServicesItem(props: any) {
             <Image
               src={props.image}
               alt="default maintenance service image"
-              layout="responsive"
               width={500}
               height={300}
               style={{ maxWidth: '100%', height: 'auto', objectFit: 'cover', objectPosition: 'center' }}
@@ -37,5 +47,3 @@ function ServicesItem(props: any) {
     </Grid>
   )
 }
-
-export default ServicesItem;

@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
             <Typography color="#000" fontSize={{ xs: '0.9rem', sm: '1rem', md: '1.2rem', lg: '1.2rem' }}>Phone: 512-902-3161</Typography>
           </Grid>
           <Grid item xs={12} sm={4} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-            <GetQuoteButton footer={true} color="primary"/>
+            <GetQuoteButton footer={true} buttonColor="primary"/>
             <Typography variant="body2" sx={{ textAlign: 'right', marginTop: 'auto' }} fontSize='0.9rem' color="#000">
               Created by <Link href="https://www.rpmdigitalsolutions.com" color="#000" underline="hover">RPM Digital Solutions</Link>
             </Typography>
