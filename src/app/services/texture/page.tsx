@@ -40,7 +40,7 @@ export default function Page(props: any) {
             Unique Texturing Techniques
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-          Whether you're looking for a subtle texture to add depth to a room or a bold artistic effect, our professionals are equipped with the tools and techniques to achieve the desired outcome. Our services include but are not limited to:
+          Whether you&apos;re looking for a subtle texture to add depth to a room or a bold artistic effect, our professionals are equipped with the tools and techniques to achieve the desired outcome. Our services include but are not limited to:
           </Typography>
           <ul>
             <li>
@@ -50,7 +50,7 @@ export default function Page(props: any) {
             </li>
             <li>
               <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-                Orange Peel Texture: Provides a light, splattered texture that's perfect for walls and ceilings.
+                Orange Peel Texture: Provides a light, splattered texture that&apos;s perfect for walls and ceilings.
               </Typography>
             </li>
             <li>
