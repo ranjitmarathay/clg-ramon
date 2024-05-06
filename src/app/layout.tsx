@@ -6,6 +6,7 @@ import Header from "../components/Header"
 import SideBanner from "../components/SideBanner";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -39,6 +40,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <Analytics/>
+          <SpeedInsights/>
         </AppRouterCacheProvider>
       </body>
     </html>
