@@ -57,7 +57,7 @@ export default function Page(props: any) {
             Interior and Exterior Enhancements
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            Enhancing the visual appeal of your property can significantly impact its desirability. Our team provides both interior and exterior remodeling services tailored to the rental market. Internally, we can repaint walls, install new fixtures, and update flooring to give your property a fresh and modern look. Externally, we offer landscaping, painting, and other enhancements that improve curb appeal and make a strong first impression on potential renters. These upgrades not only attract attention but also demonstrate the care and quality maintenance provided by the landlord, boosting the property's market value.
+            Enhancing the visual appeal of your property can significantly impact its desirability. Our team provides both interior and exterior remodeling services tailored to the rental market. Internally, we can repaint walls, install new fixtures, and update flooring to give your property a fresh and modern look. Externally, we offer landscaping, painting, and other enhancements that improve curb appeal and make a strong first impression on potential renters. These upgrades not only attract attention but also demonstrate the care and quality maintenance provided by the landlord, boosting the property&apos;s market value.
           </Typography>
         </Grid>
 

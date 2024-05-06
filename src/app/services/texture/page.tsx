@@ -32,7 +32,7 @@ export default function Page(props: any) {
             Expert Exterior Painting 
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            The exterior of your property says a lot about you. That's why at Loredo Professional Remodeling, we provide comprehensive exterior painting services designed to withstand Austin's unique climate challenges. From initial consultation to the final brush stroke, our process is thorough and designed to ensure lasting beauty and protection for your property.
+            The exterior of your property says a lot about you. That&apos;s why at Loredo Professional Remodeling, we provide comprehensive exterior painting services designed to withstand Austin&apos;s unique climate challenges. From initial consultation to the final brush stroke, our process is thorough and designed to ensure lasting beauty and protection for your property.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>

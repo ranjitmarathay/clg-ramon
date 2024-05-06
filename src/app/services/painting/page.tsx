@@ -32,7 +32,7 @@ export default function Page(props: any) {
             Expert Exterior Painting 
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            The exterior of your property says a lot about you. That's why at Loredo Professional Remodeling, we provide comprehensive exterior painting services designed to withstand Austin's unique climate challenges. From initial consultation to the final brush stroke, our process is thorough and designed to ensure lasting beauty and protection for your property.
+            The exterior of your property says a lot about you. That's why at Loredo Professional Remodeling, we provide comprehensive exterior painting services designed to withstand Austin&apos;s unique climate challenges. From initial consultation to the final brush stroke, our process is thorough and designed to ensure lasting beauty and protection for your property.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
@@ -40,7 +40,7 @@ export default function Page(props: any) {
             Transformative Interior Painting Services
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            Inside your home or office, the colors and quality of paint can define the space. Loredo’s interior painting services are tailored to reflect your style and needs. Our consultants help you choose the perfect palette to create the atmosphere you desire, and our skilled painters meticulously apply each coat, transforming ordinary spaces into stunning environments.
+            Inside your home or office, the colors and quality of paint can define the space. Loredo&apos;s interior painting services are tailored to reflect your style and needs. Our consultants help you choose the perfect palette to create the atmosphere you desire, and our skilled painters meticulously apply each coat, transforming ordinary spaces into stunning environments.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
