@@ -39,7 +39,7 @@ export default function Page(props: any) {
             Comprehensive Property Evaluation
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            Before any work begins, our team conducts a thorough evaluation of the property to identify areas that need attention. This comprehensive assessment covers everything from structural integrity to aesthetic appeal and includes checking for compliance with the latest safety regulations. Our detailed report provides landlords with clear insights into what improvements are necessary to enhance the property’s marketability and ensure tenant satisfaction. We prioritize urgent issues that could affect functionality or legal compliance, ensuring they are addressed promptly and efficiently. This initial step sets the foundation for all subsequent renovations and updates, ensuring they are effectively targeted and managed.
+            Before any work begins, our team conducts a thorough evaluation of the property to identify areas that need attention. This comprehensive assessment covers everything from structural integrity to aesthetic appeal and includes checking for compliance with the latest safety regulations. Our detailed report provides landlords with clear insights into what improvements are necessary to enhance the property&apos;s marketability and ensure tenant satisfaction. We prioritize urgent issues that could affect functionality or legal compliance, ensuring they are addressed promptly and efficiently. This initial step sets the foundation for all subsequent renovations and updates, ensuring they are effectively targeted and managed.
           </Typography>
         </Grid>
 
@@ -60,7 +60,7 @@ export default function Page(props: any) {
             Enhancing the visual appeal of your property can significantly impact its desirability. Our team provides both interior and exterior remodeling services tailored to the rental market. Internally, we can repaint walls, install new fixtures, and update flooring to give your property a fresh and modern look. Externally, we offer landscaping, painting, and other enhancements that improve curb appeal and make a strong first impression on potential renters. These upgrades not only attract attention but also demonstrate the care and quality maintenance provided by the landlord, boosting the property's market value.
           </Typography>
         </Grid>
-        
+
         <Grid item xs={12} lg={6}>
         <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
             Commitment to Quality and Craftsmanship

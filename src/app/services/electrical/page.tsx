@@ -24,7 +24,7 @@ export default function Page(props: any) {
             </Typography> 
           </Box>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-          Welcome to Loredo Professional Remodeling, your premier choice for electrical services in Austin, Texas. With over 12 years of experience in the industry, Loredo has established a reputation for reliability, expertise, and customer satisfaction. Whether you're upgrading your home, addressing emergency repairs, or setting up a new commercial building, our team of certified electricians is here to ensure your projects are completed safely and efficiently.
+          Welcome to Loredo Professional Remodeling, your premier choice for electrical services in Austin, Texas. With over 12 years of experience in the industry, Loredo has established a reputation for reliability, expertise, and customer satisfaction. Whether you&apos;re upgrading your home, addressing emergency repairs, or setting up a new commercial building, our team of certified electricians is here to ensure your projects are completed safely and efficiently.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
@@ -40,7 +40,7 @@ export default function Page(props: any) {
             Why Choose Us for Your Electrical Needs?
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-          Our electricians are not only licensed and insured but also continuously trained in the latest safety standards and technological advancements. Loredo’s commitment to quality and safety makes us a trusted partner for all electrical projects.
+          Our electricians are not only licensed and insured but also continuously trained in the latest safety standards and technological advancements. Loredo&apos;s commitment to quality and safety makes us a trusted partner for all electrical projects.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
@@ -71,7 +71,7 @@ export default function Page(props: any) {
           Safety and Compliance
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-          Safety is our top priority. Loredo’s team adheres strictly to local building codes and industry standards, ensuring that all installations and repairs are performed correctly and safely.
+          Safety is our top priority. Loredo&apos;s team adheres strictly to local building codes and industry standards, ensuring that all installations and repairs are performed correctly and safely.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
