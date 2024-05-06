@@ -20,7 +20,7 @@ export default function Page(props: any) {
         <Grid item xs={12} lg={6}>
           <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", spacing: 4, padding: 2}}>
             <Typography variant="h1" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" } }}>
-            Comprehensive Texturing Services by Loredo Professional Remodeling
+            Comprehensive Texturing Services
             </Typography> 
           </Box>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
