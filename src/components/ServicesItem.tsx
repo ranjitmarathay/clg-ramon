@@ -1,8 +1,9 @@
 // 'use client'
 
 import React from "react";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Box, Typography, Button } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 // import StaticImageData from "next/image";
 import { StaticImageData } from 'next/image';
 
@@ -11,6 +12,7 @@ interface ServiceItemProps {
   text: string;
   image?: StaticImageData;
   serviceList: string[];
+  link: string;
 }
 
 export default function ServicesItem(props: ServiceItemProps) {
@@ -21,14 +23,28 @@ export default function ServicesItem(props: ServiceItemProps) {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          height: "100%"  // Ensures the box takes full height of its container
+          height: "100%" 
         }}>
           <Typography variant="h5" sx={{ fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" } }}>
             {props.title}
           </Typography>
-          <Typography sx={{ fontSize: { xs: "0.9rem", sm: "1rem", md: "1.2rem", lg: "1.2rem" } }} color="text.secondary">
+          <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.secondary">
             {props.text}
           </Typography>
+        </Box>
+        <Box sx={{
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "left",
+          alignItems: "left",
+          height: "100%",
+          paddingTop: 2
+        }}>
+        <Link href={props.link}>
+            <Button variant="contained" sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1rem", lg: "1rem" } }}>
+              Learn More
+            </Button>
+          </Link>
         </Box>
       </Grid>
       {props.image && (

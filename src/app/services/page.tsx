@@ -35,29 +35,34 @@ export default function Page(props: any) {
         text="Elevate the look of your home or office with Loredo Professional Remodeling's expert painting services. Our skilled painters bring precision and attention to detail to every project, ensuring flawless finishes that last. From refreshing interiors with vibrant colors to protecting exteriors against the elements, we provide a full range of painting solutions tailored to meet your specific needs and style preferences. Trust us to deliver clean, consistent, and high-quality results that will rejuvenate your space."
         image={painting}
         serviceList={["test"]}
+        link="/services/painting"
       />
       <ServicesItem
         title="Texture"
         text="Revolutionize your interiors with Loredo Professional Remodeling's texture coating services. Whether you're aiming for a subtle elegance with smooth textures or seeking dramatic flair with bold textural contrasts, our specialists are equipped to bring your vision to life. We use the latest techniques and high-quality materials to create stunning, durable finishes that enhance the atmosphere of any room. Let us help you create a unique ambiance that reflects your personal taste and elevates your home's aesthetic appeal."
         image={drywall}
         serviceList={[""]}
+        link="/services/texture"
       />
       <ServicesItem
         title="Electrical"
         text="Ensure the safety and efficiency of your electrical systems with Loredo Professional Remodeling. Our certified electricians are adept at handling all types of electrical tasks from basic repairs to complete system installations. We prioritize safety, efficiency, and functionality to deliver top-notch electrical solutions that meet all codes and regulations. Whether you're upgrading your lighting, installing new electrical panels, or need emergency repairs, you can count on us for reliable, prompt, and professional service."
         image={electric}
         serviceList={[""]}
+        link="/services/electrical"
       />
       <ServicesItem
         title="Plumbing"
         text="Loredo Professional Remodeling offers comprehensive plumbing services for both residential and commercial properties. Our team of certified plumbers is equipped to handle everything from minor repairs to major installations, ensuring your plumbing system functions flawlessly."
         image={plumbing}
         serviceList={["Leak Detection & Repair", "Water Heater Installation & Repair"]}
+        link="/services/plumbing"
       />
       <ServicesItem
         title="Rental Make Ready"
         text="If you just had a tenant move out of your apartment, we can help you make it ready for the new tenant. Often times this requires a lot of very specific things like cabinet paint touch up, tile replacement, painting, texturing, etc. We are a one stop shop for all your remodeling needs and a fantastic price."
         serviceList={[""]}
+        link="/services/rental-make-ready"
       />
     </Container>
   );
