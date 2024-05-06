@@ -29,7 +29,6 @@ export default function Headline(){
         alignItems: 'center',
         justifyContent: 'center',
         textAlign: 'center',
-        // minHeight: '100vh', // Ensure container takes full height of the viewport
         padding: "0px"
       }}
     >
