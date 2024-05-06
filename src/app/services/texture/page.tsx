@@ -20,59 +20,84 @@ export default function Page(props: any) {
         <Grid item xs={12} lg={6}>
           <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", height: "100%", spacing: 4, padding: 2}}>
             <Typography variant="h1" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.5rem", md: "2rem", lg: "2.5rem" } }}>
-              Painting
+            Comprehensive Texturing Services by Loredo Professional Remodeling
             </Typography> 
           </Box>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-              At Loredo Professional Remodeling, we pride ourselves on transforming spaces and lives through our expert painting services. Based in Austin, Texas, Loredo is synonymous with quality, precision, and affordability in both exterior and interior painting projects. Whether you are refreshing your home or updating your business space, our team is equipped to deliver exceptional results.
+            At Loredo Professional Remodeling, located in Austin, Texas, we specialize not only in painting but also in providing comprehensive texturing services designed to enhance the aesthetic and value of your home. Our expertise extends to a variety of texturing techniques, including the popular removal of popcorn ceilings, tailored to meet the unique needs of each client.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
           <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
-            Expert Exterior Painting 
+            Expert Popcorn Ceiling Removal
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            The exterior of your property says a lot about you. That&apos;s why at Loredo Professional Remodeling, we provide comprehensive exterior painting services designed to withstand Austin&apos;s unique climate challenges. From initial consultation to the final brush stroke, our process is thorough and designed to ensure lasting beauty and protection for your property.
+          Popcorn ceilings, once a trend, are now often considered outdated and are notorious for collecting dust and allergens. Loredo Professional Remodeling offers expert popcorn ceiling removal services, transforming your ceilings into smooth, modern surfaces. Our skilled team ensures a clean, updated look that not only increases the appeal of your home but also its market value.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
         <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
-            Transformative Interior Painting Services
+            Unique Texturing Techniques
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            Inside your home or office, the colors and quality of paint can define the space. Loredo’s interior painting services are tailored to reflect your style and needs. Our consultants help you choose the perfect palette to create the atmosphere you desire, and our skilled painters meticulously apply each coat, transforming ordinary spaces into stunning environments.
+          Whether you're looking for a subtle texture to add depth to a room or a bold artistic effect, our professionals are equipped with the tools and techniques to achieve the desired outcome. Our services include but are not limited to:
           </Typography>
+          <ul>
+            <li>
+              <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
+                Knockdown Texture: Ideal for adding a contemporary look while hiding imperfections. 
+              </Typography>
+            </li>
+            <li>
+              <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
+                Orange Peel Texture: Provides a light, splattered texture that's perfect for walls and ceilings.
+              </Typography>
+            </li>
+            <li>
+              <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
+                Skip Trowel Texture: A hand-applied technique that gives a Mediterranean appeal.
+              </Typography>
+            </li>
+          </ul>
         </Grid>
         <Grid item xs={12} lg={6}>
-        <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
-            Commitment to Quality and Craftsmanship
+          <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
+            Transformative Texturing Process
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            Our reputation at Loredo Professional Remodeling is built on a foundation of high-quality craftsmanship. Our painters are not only skilled but passionate about making every detail count. This dedication to excellence ensures flawless finishes and satisfied clients.
+            Our texturing process begins with a detailed consultation to understand your vision and requirements. We then prepare your space thoroughly, covering furniture and floors to protect against any spills or splatters. Our professionals meticulously apply the chosen texture, ensuring consistency and quality across every touchpoint.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
           <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
-            Affordable Excellence in Painting
+            Quality and Durability Guaranteed
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            Quality does not have to come at a premium. Loredo Professional Remodeling offers competitive pricing on all our painting services, ensuring that you can achieve the look you want without breaking the bank. We provide detailed quotes and flexible pricing options to fit your budget and project scope.
+            At Loredo Professional Remodeling, we use only the highest quality materials, ensuring that the textures we apply not only look fantastic but also stand the test of time, even in the demanding Austin climate. Our commitment to quality materials and craftsmanship guarantees a finish that you can be proud of.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
           <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
-            The Loredo Difference in Painting Services
+            Affordable Texturing Services
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-            What sets Loredo apart is our commitment to customer satisfaction and the quality of our work. Our success stories and client testimonials speak volumes about our ability to exceed expectations and deliver stunning results.
+            Understanding the budgetary constraints of renovations, we offer competitive pricing on all our texturing services. Loredo Professional Remodeling provides upfront quotes and flexible pricing options, ensuring our services are accessible without compromising on quality.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
           <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
-            Preparing Your Space for Painting
+            Why Choose Loredo for Your Texturing Needs
           </Typography>
           <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
-          Before any paint is applied, our team at Loredo Professional Remodeling ensures your space is ready for a transformation. We take steps to protect your furnishings and minimize disruption, making the painting process smooth and stress-free.
+            Choosing Loredo means opting for a team that is deeply committed to enhancing your living space. Our track record of exceeding customer expectations and our meticulous attention to detail make us a preferred choice in the Austin area.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} lg={6}>
+          <Typography variant="h5" sx={{ fontWeight: "bold", fontSize: { xs: "1.2rem", sm: "1.2rem", md: "1.5rem", lg: "1.75rem" } }}>
+            Preparing Your Home for Texturing
+          </Typography>
+          <Typography sx={{ fontSize: { xs: "1rem", sm: "1rem", md: "1.2rem", lg: "1.25rem" } }} color="text.primary">
+            Before we begin any texturing project, our team takes comprehensive steps to ensure your home is ready for a transformation. This includes moving and covering furniture, taping off areas not being textured, and setting up our equipment with the utmost care to ensure a seamless and clean process.
           </Typography>
         </Grid>
         <Grid item xs={12} lg={6}>
